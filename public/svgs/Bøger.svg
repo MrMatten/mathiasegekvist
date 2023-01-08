@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 172.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a6bff1;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #9fd000;
+      }
+
+      .cls-3 {
+        fill: #2b337c;
+      }
+    </style>
+  </defs>
+  <g id="Bøger">
+    <g>
+      <rect class="cls-1" x="46.15997" y="19.5" width="38.34003" height="152"/>
+      <rect class="cls-2" x="25.5" y=".5" width="21" height="171" transform="translate(72 172) rotate(-180)"/>
+      <rect class="cls-3" x=".5" y="24" width="25" height="148" transform="translate(26 196) rotate(-180)"/>
+    </g>
+  </g>
+</svg>
