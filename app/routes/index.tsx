@@ -1,6 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 
 import styleSheet from "~/styles/landingpage.css"
+import shelf from "~/svgs/hylde.svg"
 
 export const links: LinksFunction = () => {
   return [
@@ -14,6 +15,7 @@ export const links: LinksFunction = () => {
 export default function Index() {
   return (
     <div>
+        <img src={shelf} />
     </div>
   );
 }
