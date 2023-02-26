@@ -1,11 +1,11 @@
 import type { LinksFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 
 import styleSheet from "~/styles/landingpage.css";
 import shelf from "~/svgs/hylde.svg";
 import books from "~/svgs/books.svg";
 import pen from "~/svgs/pen.svg";
 import cocktail from "~/svgs/cocktail.svg";
-import { Link } from "@remix-run/react";
 
 export const links: LinksFunction = () => {
   return [
