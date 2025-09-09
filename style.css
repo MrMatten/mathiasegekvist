@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
+
+body {
+  background: linear-gradient(180deg, rgba(42, 61, 74, 1) 0%, rgba(209, 98, 66, 0.8) 40%);
+  font-family: "Bevan", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+img {
+  border-radius: 1rem;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media-item {
+  width: 2rem;
+  height: 2rem;
+}
