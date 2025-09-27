@@ -22,7 +22,7 @@ params:
   internalPagination: false # Use Hugo's internal pagination template, default false.
   logo: true # Turn off the logo, defaults to true.
   logoPath: # Relative path to site logo, defaults to "images/logo.png", no leading slash.
-  logoHeight: # Set logo height, defaults to none.
+  logoHeight: "50" # Set logo height, defaults to none.
   logoWidth: # Set logo width, defaults to none.
   math: false # Turn on math typesetting with KaTeX, default false.
   menuInHeader: false # Move the main menu to the header, default false.

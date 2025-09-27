@@ -4,7 +4,6 @@ draft = false
 title = 'Tools'
 +++
 
-# Tools
 Software are getting all these smart tools that can do all kind of fancy stuff for a small fee.
 
 I generally like the idea behind it but often a tool ends up being something you'll have to learn. If you have to spend time learning something why not learn the technology behind it all, so you have more freedom?
