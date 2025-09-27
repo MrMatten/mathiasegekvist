@@ -1,0 +1,49 @@
+baseURL: "https://blog.mathiasegekvist.dk/"
+baseurl: "https://example.org/"
+title: "Blog of Mathias"
+theme: "zen"
+languageCode: "en-GB" # Set your language code (only needed for none multilingual sites).
+
+params:
+  alpine: false # Add AlpineJS, default false.
+  author:
+    name: Mathias Hvid Egekvist
+    url: https://mathiasegekvist.dk
+    avatar: # path/to/some-image.jpg
+  blogSections: # Sections whose <schema.org> `JSON+LD` in the page `<head>`
+    - blog # will be `@type: BlogPosting`.
+    - post # Defaults to a list including only 'post' and 'blog'.
+  breadcrumbSections: # Sections in which pages will have a `BreadcrumbListing`
+    - section2 # in the <schema.org> `JSON+LD` in the page's `<head>`.
+    - section3 # This theme requires Hugo `v0.109.0` or higher to
+      # generate the `BreadcrumbListing`.
+  cookieConsent: false # Show cookie consent form, default false.
+  contact: "me@mathiasegekvist.dk"
+  description: "Just my random blog"
+  favicon: "" # Relative path to favicon in json feed, no leading slash.
+  feedlinks: true # Show feed links in the footer.
+  footer: "A [example.org](https://example.org/) production."
+  icon: "" # Relative path to icon in json feed and JSON-LD, no leading slash.
+  image: "" # Relative path to site image in JSON-LD, no leading slash.
+  imageMaxWidth: "" # Max width for images added via figure shortcode.
+  internalPagination: false # Use Hugo's internal pagination template, default false.
+  logo: true # Turn off the logo, defaults to true.
+  logoPath: # Relative path to site logo, defaults to "images/logo.png", no leading slash.
+  logoHeight: # Set logo height, defaults to none.
+  logoWidth: # Set logo width, defaults to none.
+  mainSections: # The sections you want to have listed on the front page.
+    - "section1" # Default to the section with most content if not set.
+    - "section2" # Set to empty if no section should be listed.
+  math: false # Turn on math typesetting with KaTeX, default false.
+  menuInHeader: false # Move the main menu to the header, default false.
+  microUsername: "" # Your micro.blog username.
+  mobileMenu: false # Turn on a mobile menu on small screens, default false.
+  mobileMenuOutline: false # Mobil menu button as outline, default false.
+  poweredby: true # Show powered by hugo in footer
+  relatedposts: true # Show related posts under a "See also" section, default false.
+  sassTranspiler: "dartsass" # The Sass transpiler to use, default "libsass".
+  searchLimit: 20 # Max number of search hits, default 20.
+  sidebar: false # Show a sidebar to the right, default false.
+  siteName: true # Hide the site name (visually-hidden), default true.
+  submitted: true # Show author and date information for a post.
+  themeColor: # Hex color value, used in meta tags, default "#ffffff".
