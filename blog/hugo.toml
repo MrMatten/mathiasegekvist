@@ -1,4 +1,6 @@
-baseURL = "https://mathiasegekvist.dk/"
+baseURL = "https://mathiasegekvist.dk/blog/"
+publishDir = "public"
+canonifyURLs = true
 languageCode = 'en-us'
 theme = 'zen'
 title = 'Blog of Mathias'
