@@ -1,4 +1,4 @@
-baseURL = 'https://mathiasegekvist.dk/blog/'
+baseURL = '/blog/'
 languageCode = 'en-us'
 theme = 'zen'
 title = 'Blog of Mathias'
