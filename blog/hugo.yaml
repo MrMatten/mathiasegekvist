@@ -41,7 +41,7 @@ params:
   mobileMenuOutline: false # Mobil menu button as outline, default false.
   poweredby: true # Show powered by hugo in footer
   relatedposts: true # Show related posts under a "See also" section, default false.
-  sassTranspiler: "dartsass" # The Sass transpiler to use, default "libsass".
+  sassTranspiler: "libsass" # The Sass transpiler to use, default "libsass".
   searchLimit: 20 # Max number of search hits, default 20.
   sidebar: false # Show a sidebar to the right, default false.
   siteName: true # Hide the site name (visually-hidden), default true.
