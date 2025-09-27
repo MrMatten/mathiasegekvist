@@ -10,13 +10,6 @@ params:
     name: Mathias Hvid Egekvist
     url: https://mathiasegekvist.dk
     avatar: # path/to/some-image.jpg
-  blogSections: # Sections whose <schema.org> `JSON+LD` in the page `<head>`
-    - blog # will be `@type: BlogPosting`.
-    - post # Defaults to a list including only 'post' and 'blog'.
-  breadcrumbSections: # Sections in which pages will have a `BreadcrumbListing`
-    - section2 # in the <schema.org> `JSON+LD` in the page's `<head>`.
-    - section3 # This theme requires Hugo `v0.109.0` or higher to
-      # generate the `BreadcrumbListing`.
   cookieConsent: false # Show cookie consent form, default false.
   contact: "me@mathiasegekvist.dk"
   description: "Just my random blog"
@@ -31,9 +24,6 @@ params:
   logoPath: # Relative path to site logo, defaults to "images/logo.png", no leading slash.
   logoHeight: # Set logo height, defaults to none.
   logoWidth: # Set logo width, defaults to none.
-  mainSections: # The sections you want to have listed on the front page.
-    - "section1" # Default to the section with most content if not set.
-    - "section2" # Set to empty if no section should be listed.
   math: false # Turn on math typesetting with KaTeX, default false.
   menuInHeader: false # Move the main menu to the header, default false.
   microUsername: "" # Your micro.blog username.
