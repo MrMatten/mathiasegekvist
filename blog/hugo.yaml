@@ -1,5 +1,4 @@
 baseURL: "https://blog.mathiasegekvist.dk/"
-baseurl: "https://example.org/"
 title: "Blog of Mathias"
 theme: "zen"
 languageCode: "en-GB" # Set your language code (only needed for none multilingual sites).
