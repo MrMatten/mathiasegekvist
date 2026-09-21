@@ -1,0 +1,228 @@
+<!doctype html><html lang="da"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nyt tag &mdash; bilag</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#111;--mut:#6B6B6B;--rule:#DCDCDC;--mic:#0B4F8A;--mat:#B23A00;--sol:#2E7D32}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);
+ font-size:13pt;line-height:1.5;background:#E9E7E2}
+.page > *{flex-shrink:0}
+.page{width:210mm;height:296.5mm;margin:0 auto 8mm;background:#fff;padding:22mm 20mm 18mm;
+ overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(0,0,0,.16)}
+
+h1{font-size:34pt;line-height:1.05;letter-spacing:-.025em;font-weight:800}
+h2{font-size:27pt;line-height:1.1;letter-spacing:-.02em;font-weight:800}
+h3{font-size:10.5pt;text-transform:uppercase;letter-spacing:.16em;color:var(--mut);font-weight:700}
+.eyebrow{font-size:10.5pt;text-transform:uppercase;letter-spacing:.2em;color:var(--mut);font-weight:700}
+.head{border-bottom:3px solid var(--ink);padding-bottom:16px;margin-bottom:26px}
+.head .ico{font-size:30pt;line-height:1;margin-bottom:12px;display:block}
+.meta{margin-top:12px;font-size:12pt;color:var(--mut)}
+
+u{border-bottom:2px solid var(--ink);text-decoration:none;display:inline-block;height:1.3em}
+.field .lab{font-size:9.5pt;text-transform:uppercase;letter-spacing:.14em;color:var(--mut);font-weight:700}
+.field .box{border-bottom:2px solid var(--ink);height:15mm}
+.field.sm .box{height:11mm}
+.fgrid{display:grid;gap:20px}
+.f1{grid-template-columns:1fr} .f2{grid-template-columns:1fr 1fr} .f3{grid-template-columns:1fr 1fr 1fr} .f4{grid-template-columns:1fr 1fr 1fr 1fr}
+
+ul{list-style:none}
+li.t{display:flex;gap:16px;align-items:flex-start;padding:13px 0 13px 16px;border-bottom:1px solid var(--rule);
+ border-left:5px solid var(--rule)}
+li.t.m{border-left-color:var(--mic)} li.t.x{border-left-color:var(--mat)} li.t.s{border-left-color:var(--sol)}
+.cb{flex:0 0 auto;width:18px;height:18px;border:2px solid var(--ink);border-radius:3px;background:#fff;margin-top:4px}
+.tt{flex:1;font-size:13.5pt;line-height:1.4}
+.by{font-size:9.5pt;text-transform:uppercase;letter-spacing:.13em;font-weight:700;flex:0 0 auto;margin-top:6px}
+.by.m{color:var(--mic)} .by.x{color:var(--mat)}
+
+ol.seq{list-style:none;counter-reset:s}
+ol.seq li{counter-increment:s;display:flex;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule);font-size:13.5pt}
+ol.seq li::before{content:counter(s);flex:0 0 34px;font-size:11pt;font-weight:800;color:var(--mut);
+ text-align:right;font-variant-numeric:tabular-nums}
+
+.obs{border-left:5px solid var(--ink);padding:14px 0 14px 18px;margin-top:22px;font-size:12.5pt;line-height:1.5}
+.obs .h{font-size:10pt;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--mut);display:block;margin-bottom:6px}
+
+table{width:100%;border-collapse:collapse;font-size:12pt}
+th{text-align:left;font-size:9.5pt;text-transform:uppercase;letter-spacing:.13em;color:var(--mut);
+ font-weight:700;padding:0 10px 10px;border-bottom:3px solid var(--ink)}
+td{padding:13px 10px;border-bottom:1px solid var(--rule);vertical-align:middle}
+td.c{text-align:center}
+table.tall td{height:19mm;padding:10px}
+
+.legend{display:flex;gap:30px;font-size:11.5pt;margin:22px 0 0}
+.legend span{display:flex;align-items:center;gap:10px}
+.legend i{width:26px;height:5px;display:block}
+.legend i.m{background:var(--mic)} .legend i.x{background:var(--mat)} .legend i.s{background:var(--sol)}
+.lines div{border-bottom:1px solid var(--rule);height:12mm}
+a{color:var(--mic);text-decoration:none;border-bottom:1px solid rgba(11,79,138,.4)}
+.grow{flex:1}
+.foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:9.5pt;color:var(--mut);
+ display:flex;justify-content:space-between}
+
+/* fuldside-adskiller */
+.sep{text-align:center}
+.sepwrap{flex:1;display:flex;flex-direction:column;justify-content:center}
+.sep .no{font-size:11pt;text-transform:uppercase;letter-spacing:.3em;color:var(--mut);font-weight:700}
+.sep .big{font-size:64pt;font-weight:800;letter-spacing:-.04em;line-height:1;margin:14px 0 22px}
+.sep .desc{font-size:15pt;line-height:1.5;max-width:130mm;margin:0 auto;color:#333}
+.sep .who{margin-top:34px;font-size:10pt;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
+.sep .who .n{display:block;font-size:19pt;letter-spacing:-.01em;text-transform:none;margin-top:6px}
+.days{display:flex;gap:11px;justify-content:center;margin-top:34px}
+.days .d{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:9pt;font-weight:700;color:var(--mut)}
+.days .d i{display:block;width:28px;height:28px;border:2px solid var(--ink);border-radius:4px}
+.days .d.we i{border-color:#BBB}
+.sepfields{display:flex;gap:30px;justify-content:center;margin-top:30px}
+.sepfields .field{width:52mm}
+
+@media print{ body{background:#fff} .page{margin:0;box-shadow:none} @page{size:A4;margin:0} }
+</style></head><body>
+<div class="page "><div class="head"><div class="eyebrow">Nyt tag</div><h2>Bilag</h2><div class="meta">Baggrund til arbejdsplanen. Selve planen: <a href="tagplan.html" style="color:inherit">tagplan.html</a></div></div><div style="display:flex;align-items:center;gap:16px;padding:13px 0 13px 0;border-bottom:1px solid var(--rule)"><span style="flex:1;font-size:13.5pt;font-weight:700">Udluftning</span><span style="font-size:11.5pt;color:var(--mut);text-align:right;white-space:nowrap">Luftvej, tagfod og kip</span></div><div style="display:flex;align-items:center;gap:16px;padding:13px 0 13px 0;border-bottom:1px solid var(--rule)"><span style="flex:1;font-size:13.5pt;font-weight:700">Presenning</span><span style="font-size:11.5pt;color:var(--mut);text-align:right;white-space:nowrap">Indk&oslash;b og montering</span></div><div style="display:flex;align-items:center;gap:16px;padding:13px 0 13px 0;border-bottom:1px solid var(--rule)"><span style="flex:1;font-size:13.5pt;font-weight:700">Unders&oslash;gelse og kilder</span><span style="font-size:11.5pt;color:var(--mut);text-align:right;white-space:nowrap">Baggrund</span></div><div class="foot"><span>Nyt tag &middot; bilag</span><span>Indhold</span></div></div>
+<div class="page "><div class="head"><span class="ico">💨</span><div class="eyebrow"></div><h2>Udluftning &mdash; luftvejen</h2></div>
+<svg viewBox="0 0 660 330" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+   <path d="M0,1 L9,5 L0,9 z" fill="#0B4F8A"/></marker>
+  <pattern id="iso2" width="12" height="12" patternUnits="userSpaceOnUse">
+   <path d="M0,12 L12,0" stroke="#BBB" stroke-width="1.3"/></pattern>
+ </defs>
+ <path d="M40,270 L330,66 L620,270" fill="none" stroke="#111" stroke-width="2.5"/>
+ <path d="M62,270 L330,82 L598,270" fill="none" stroke="#111" stroke-width="1.4"/>
+ <path d="M84,270 L330,98 L576,270" fill="none" stroke="#111" stroke-width="1.4" stroke-dasharray="6 4"/>
+ <path d="M106,270 L330,113 L554,270 Z" fill="url(#iso2)" stroke="#111" stroke-width="1.6"/>
+ <g stroke="#0B4F8A" stroke-width="3.2" marker-end="url(#a)" fill="none">
+  <path d="M22,290 L58,270"/><path d="M638,290 L602,270"/>
+  <path d="M150,232 L242,168"/><path d="M510,232 L418,168"/>
+  <path d="M316,60 L286,28"/><path d="M344,60 L374,28"/>
+ </g>
+ <g font-family="-apple-system,Helvetica,Arial" font-size="15" fill="#111">
+  <text x="330" y="18" text-anchor="middle" font-weight="700">Ud ved kippen</text>
+  <text x="16" y="312" font-weight="700">Ind ved tagfoden</text>
+  <text x="644" y="312" text-anchor="end" font-weight="700">Ind ved tagfoden</text>
+  <text x="330" y="222" text-anchor="middle" fill="#6B6B6B">isolering mellem sp&#230;rene</text>
+ </g>
+ <text x="330" y="252" text-anchor="middle" font-family="-apple-system,Helvetica,Arial"
+   font-size="13" fill="#0B4F8A" font-weight="700">to spalter hele vejen op: 45 mm og 25 mm</text>
+</svg><div class="obs"><span class="h">Konsekvens</span>Loftet bliver efterisoleret langs tagfladen senere. Luften skal derfor op langs hele tagfladen og ud ved kippen. Udluftningen ved kip og tagfod skal etableres nu, mens taget er &aring;bent.</div><div class="foot"><span>Nyt tag</span><span>Udluftning &middot; luftvejen</span></div></div>
+
+<div class="page "><div class="head"><span class="ico">💨</span><div class="eyebrow">Udluftning</div><h2>Tagfod</h2></div><svg viewBox="0 0 990 530" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#0B4F8A"/></marker><pattern id="n2" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0,0 L0,6 M0,0 L6,0" stroke="#666" stroke-width="1"/></pattern><pattern id="i3" width="13" height="13" patternUnits="userSpaceOnUse"><path d="M0,13 L13,0" stroke="#BBB" stroke-width="1.3"/></pattern></defs>
+<polygon points="444.0,360.1 651.8,240.1 647.8,233.1 440.0,353.1" fill="#FAFAFA" stroke="#111" stroke-width="2.2"/>
+<polygon points="440.0,353.1 647.8,233.1 645.8,229.7 438.0,349.7" fill="#B23A00" stroke="#111" stroke-width="1.1"/>
+<polygon points="438.0,349.7 645.8,229.7 614.8,176.0 407.0,296.0" fill="url(#i3)" stroke="#111" stroke-width="2.2"/>
+<polygon points="381.0,311.0 614.8,176.0 599.8,150.0 366.0,285.0" fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polygon points="355.0,326.0 375.8,314.0 360.8,288.0 340.0,300.0" fill="url(#n2)" stroke="#111" stroke-width="1.5"/>
+<line x1="399.5" y1="283.0" x2="546.7" y2="198.0" stroke="#0B4F8A" stroke-width="3" marker-end="url(#f)"/>
+<line x1="338.0" y1="356.6" x2="355.9" y2="311.6" stroke="#0B4F8A" stroke-width="3" marker-end="url(#f)"/>
+<polygon points="340.0,300.0 599.8,150.0 592.8,137.9 333.0,287.9" fill="#FAFAFA" stroke="#111" stroke-width="2.2"/>
+<polygon points="340.0,300.0 306.7,347.5 295.3,339.5 328.5,292.0" fill="#FAFAFA" stroke="#111" stroke-width="2.2"/>
+<polygon points="333.0,287.9 592.8,137.9 590.3,133.5 330.5,283.5" fill="#333" stroke="#111" stroke-width="1.1"/>
+<polygon points="328.5,292.0 291.8,344.4 287.7,341.5 324.4,289.1" fill="#333" stroke="#111" stroke-width="1.1"/>
+<path d="M287.7,341.5 L290.3,360.5" stroke="#111" stroke-width="3.4" fill="none"/>
+<polygon points="323.6,287.5 590.3,133.5 579.8,115.4 313.1,269.4" fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polygon points="323.6,287.5 342.6,276.5 332.1,258.4 313.1,269.4" fill="url(#n2)" stroke="#111" stroke-width="1.5"/>
+<line x1="365.3" y1="251.9" x2="507.4" y2="169.9" stroke="#0B4F8A" stroke-width="3" marker-end="url(#f)"/>
+<line x1="286.0" y1="326.5" x2="314.9" y2="284.5" stroke="#0B4F8A" stroke-width="3" marker-end="url(#f)"/>
+<polygon points="368.5,237.4 387.5,226.4 377.5,209.0 358.5,220.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="434.3,199.4 453.4,188.4 443.4,171.0 424.3,182.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="500.1,161.4 519.2,150.4 509.2,133.0 490.1,144.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="552.1,131.4 571.1,120.4 561.1,103.0 542.1,114.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="278.8,266.0 360.2,219.0 351.7,204.3 270.3,251.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<polygon points="355.0,222.0 436.4,175.0 427.9,160.3 346.5,207.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<polygon points="431.2,178.0 512.6,131.0 504.1,116.3 422.7,163.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<polygon points="507.5,134.0 588.9,87.0 580.4,72.3 499.0,119.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<path d="M264.0,387.8 A34,34 0 0 0 332.0,387.8 L264.0,387.8 Z" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<line x1="565.8" y1="91.1" x2="666" y2="115" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="120" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Tagd&#230;kning</text>
+<line x1="574.8" y1="106.7" x2="666" y2="145" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="150" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Tagl&#230;gte</text>
+<line x1="585.3" y1="124.9" x2="666" y2="175" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="180" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Afstandsliste &#8212; spalte 25 mm</text>
+<line x1="591.8" y1="136.1" x2="666" y2="205" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="210" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Tagpap</text>
+<line x1="596.3" y1="143.9" x2="666" y2="231" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="236" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Krydsfiner &#8212; fast undertag</text>
+<line x1="607.3" y1="163.0" x2="666" y2="261" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="266" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Spalte 45 mm over isoleringen</text>
+<line x1="629.8" y1="202.0" x2="666" y2="295" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="300" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Isolering</text>
+<line x1="646.8" y1="231.4" x2="666" y2="327" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="332" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Dampsp&#230;rre</text>
+<line x1="649.8" y1="236.6" x2="666" y2="351" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="674" y="356" font-family="-apple-system,Helvetica,Arial" font-size="13.5" fill="#111">Loftbekl&#230;dning</text>
+<line x1="327.6" y1="272.5" x2="300" y2="48" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="300" y="52" text-anchor="end" font-family="-apple-system,Helvetica,Arial" font-size="13" fill="#111" font-weight="700">Fuglegitter m. vent.</text>
+<text x="300" y="70" text-anchor="end" font-family="-apple-system,Helvetica,Arial" font-size="12.5" fill="#0B4F8A" font-weight="700">indtag til spalten under stenene</text>
+<line x1="357.9" y1="307.0" x2="262" y2="452" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="262" y="456" text-anchor="end" font-family="-apple-system,Helvetica,Arial" font-size="13" fill="#111" font-weight="700">Insektnet</text>
+<text x="262" y="474" text-anchor="end" font-family="-apple-system,Helvetica,Arial" font-size="12.5" fill="#0B4F8A" font-weight="700">indtag 15 mm, 30 mm med net</text>
+<line x1="317.1" y1="320.6" x2="446" y2="466" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="446" y="470" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-size="13" fill="#111" >Skr&#229;stillet fodplade</text>
+<line x1="290.3" y1="360.5" x2="152" y2="388" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="152" y="392" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-size="13" fill="#111" >Fodblik</text>
+<line x1="298.0" y1="387.8" x2="150" y2="502" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="150" y="506" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-size="13" fill="#111" >Tagrende</text>
+</svg><div style="font-size:10.5pt;color:var(--mut);margin-top:8px;text-align:right">Genereret af AI &middot; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=63">se rapport her</a> &middot; figur 12.1.3.1, side 63</div><div class="obs"><span class="h">Tre forskellige tal</span><b>15 mm</b> er bredden p&aring; selve indtaget ved tagfoden, 30 mm hvis der er insektnet i det. <b>25 mm</b> og <b>45 mm</b> er h&oslash;jden p&aring; de to spalter luften l&oslash;ber i op ad taget. Samlet &aring;bning ved tagfoden: 150 cm&sup2; pr. meter i hver side.</div><div class="foot"><span>Nyt tag</span><span>Detalje &middot; tagfod</span></div></div>
+
+<div class="page "><div class="head"><span class="ico">💨</span><div class="eyebrow">Udluftning</div><h2>Kip</h2></div><svg viewBox="0 0 900 540" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#0B4F8A"/></marker><pattern id="iso" width="13" height="13" patternUnits="userSpaceOnUse"><path d="M0,13 L13,0" stroke="#BBB" stroke-width="1.3"/></pattern></defs>
+<polygon points="354.8,255.0 188.5,351.0 173.5,325.0 339.8,229.0" fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polygon points="381.8,301.7 215.5,397.7 188.5,351.0 354.8,255.0" fill="url(#iso)" stroke="#111" stroke-width="2.2"/>
+<polygon points="345.0,226.0 173.5,325.0 167.0,313.7 338.5,214.7" fill="#FAFAFA" stroke="#111" stroke-width="2.2"/>
+<polygon points="425.2,255.0 591.5,351.0 606.5,325.0 440.2,229.0" fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polygon points="398.2,301.7 564.5,397.7 591.5,351.0 425.2,255.0" fill="url(#iso)" stroke="#111" stroke-width="2.2"/>
+<polygon points="435.0,226.0 606.5,325.0 613.0,313.7 441.5,214.7" fill="#FAFAFA" stroke="#111" stroke-width="2.2"/>
+<polygon points="341.5,228.0 383.1,204.0 396.9,204.0 438.5,228.0 423.5,254.0 356.5,254.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="378.3,191.7 167.0,313.7 164.5,309.4 375.8,187.4" fill="#333" stroke="#111" stroke-width="1.2"/>
+<polygon points="351.6,201.4 164.5,309.4 153.5,290.4 340.6,182.4" fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polygon points="286.9,213.4 267.8,224.4 257.8,207.0 276.9,196.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="224.5,249.4 205.5,260.4 195.5,243.0 214.5,232.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="169.1,281.4 150.0,292.4 140.0,275.0 159.1,264.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="330.6,165.0 263.0,204.0 254.5,189.3 322.1,150.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<polygon points="269.9,200.0 202.4,239.0 193.9,224.3 261.4,185.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<polygon points="209.3,235.0 141.8,274.0 133.3,259.3 200.8,220.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<line x1="172.9" y1="291.9" x2="271.6" y2="234.9" stroke="#0B4F8A" stroke-width="3.2" marker-end="url(#k)"/>
+<line x1="194.9" y1="330.0" x2="267.6" y2="288.0" stroke="#0B4F8A" stroke-width="3.2" marker-end="url(#k)"/>
+<polygon points="401.7,191.7 613.0,313.7 615.5,309.4 404.2,187.4" fill="#333" stroke="#111" stroke-width="1.2"/>
+<polygon points="428.4,201.4 615.5,309.4 626.5,290.4 439.4,182.4" fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polygon points="493.1,213.4 512.2,224.4 522.2,207.0 503.1,196.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="555.5,249.4 574.5,260.4 584.5,243.0 565.5,232.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="610.9,281.4 630.0,292.4 640.0,275.0 620.9,264.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="449.4,165.0 517.0,204.0 525.5,189.3 457.9,150.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<polygon points="510.1,200.0 577.6,239.0 586.1,224.3 518.6,185.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<polygon points="570.7,235.0 638.2,274.0 646.7,259.3 579.2,220.3" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<line x1="607.1" y1="291.9" x2="508.4" y2="234.9" stroke="#0B4F8A" stroke-width="3.2" marker-end="url(#k)"/>
+<line x1="585.1" y1="330.0" x2="512.4" y2="288.0" stroke="#0B4F8A" stroke-width="3.2" marker-end="url(#k)"/>
+<polygon points="355.0,199.4 425.0,199.4 442.0,170.0 338.0,170.0" fill="#F2F2F2" stroke="#111" stroke-width="2.2"/>
+<polygon points="321.3,265.1 292.3,214.8 275.0,224.8 304.0,275.1" fill="#FFF" stroke="#111" stroke-width="2.2"/>
+<line x1="310.7" y1="266.6" x2="285.7" y2="223.3" stroke="#0B4F8A" stroke-width="3" marker-end="url(#k)"/>
+<path d="M325.5,148.3 A120,120 0 0 1 454.5,148.3 L454.5,155.3 A100,100 0 0 0 325.5,155.3 Z" fill="#FFF" stroke="#111" stroke-width="2.4"/>
+<line x1="338.0" y1="126.0" x2="302.0" y2="76.0" stroke="#0B4F8A" stroke-width="3.2" marker-end="url(#k)"/>
+<line x1="442.0" y1="126.0" x2="478.0" y2="76.0" stroke="#0B4F8A" stroke-width="3.2" marker-end="url(#k)"/>
+<line x1="611.1" y1="249.1" x2="668" y2="347" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="676" y="352" font-family="-apple-system,Helvetica,Arial" font-size="14" fill="#111">Tagsten</text>
+<line x1="602.1" y1="264.7" x2="668" y2="371" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="676" y="376" font-family="-apple-system,Helvetica,Arial" font-size="14" fill="#111">L&#230;gte</text>
+<line x1="591.6" y1="282.9" x2="668" y2="395" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="676" y="400" font-family="-apple-system,Helvetica,Arial" font-size="14" fill="#111">Ventilationsspalte 25 mm</text>
+<line x1="584.6" y1="295.0" x2="668" y2="419" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="676" y="424" font-family="-apple-system,Helvetica,Arial" font-size="14" fill="#111">Tagpap</text>
+<line x1="580.1" y1="302.8" x2="668" y2="441" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="676" y="446" font-family="-apple-system,Helvetica,Arial" font-size="14" fill="#111">Plader</text>
+<line x1="569.6" y1="321.0" x2="668" y2="465" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="676" y="470" font-family="-apple-system,Helvetica,Arial" font-size="14" fill="#111">Ventilationsspalte 45 mm</text>
+<line x1="548.6" y1="357.4" x2="668" y2="489" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="676" y="494" font-family="-apple-system,Helvetica,Arial" font-size="14" fill="#111">Isolering mellem sp&#230;r</text>
+<line x1="294.7" y1="238.9" x2="226" y2="162" stroke="#111" stroke-width="1" opacity=".5"/>
+<text x="226" y="166" text-anchor="end" font-family="-apple-system,Helvetica,Arial" font-size="14" fill="#111" font-weight="700">Ventilationsstuds i hvert sp&#230;rfag</text>
+<text x="390" y="34" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-size="14" font-weight="700" fill="#111">Luft ud under rygningen</text>
+<text x="450" y="532" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-size="12.5" fill="#6B6B6B">Snit gennem kippen. Undertaget lukkes ved kip &#8212; det stopper ikke.</text>
+</svg><div style="font-size:10.5pt;color:var(--mut);margin-top:8px;text-align:right">Genereret af AI &middot; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=67">se rapport her</a> &middot; figur 12.2.2.1, side 67</div><div class="obs"><span class="h">S&aring;dan siger anvisningen</span>Undertaget lukkes ved kip. De to plader st&oslash;des mod en affaset planke mellem sp&aelig;rene, samlingen t&aelig;tnes med en kl&aelig;bet eller svejst tagpapstrimmel, og herp&aring; monteres en rygningsplanke p&aring; kipbeslag.<br>Ventilation under undertaget sker med studse eller fisk i hvert sp&aelig;rfag: <b>100 cm&sup2; pr. sp&aelig;rfag i hver side</b> ved en husdybde p&aring; 9,4 m. Med 910 mm mellem sp&aelig;rene over 20 m er det ca. 22 pr. side.<br>Ventilation over undertaget sker gennem perforeret rygningsb&aring;nd eller tudsten. For vingetagsten kan tudsten udelades, fordi stenene selv er &aring;bne nok i samlingerne.</div><div class="foot"><span>Nyt tag</span><span>Detalje &middot; kip</span></div></div>
+
+<div class="page "><div class="head"><span class="ico">🌧️</span><div class="eyebrow"></div><h2>Presenning</h2></div><h3>Hvad der skal k&oslash;bes</h3><table style="margin:10px 0 22px"><thead><tr><th>Brug</th><th>Type</th><th>V&aelig;gt</th></tr></thead><tbody><tr><td>&Aring;ben tagflade om natten</td><td>PVC-belagt polyester</td><td>550&ndash;650 g/m&sup2;</td></tr><tr><td>Plader uden tagpap</td><td>PVC-belagt polyester</td><td>550&ndash;650 g/m&sup2;</td></tr><tr><td>Hul efter skorstenen</td><td>PE</td><td>200 g/m&sup2;</td></tr></tbody></table><div class="obs"><span class="h">M&aring;l</span>Tagfladen er 20 m lang. Fra tagfod til kip er der ca. 5,4 m p&aring; hver side. Presenninger k&oslash;bes med &oslash;jer hele vejen rundt og l&aelig;gges med mindst 50 cm overl&aelig;g.</div><div style="height:20px"></div><div class="fgrid f2"><div class="field"><div class="lab">St&oslash;rrelse og antal</div><div class="box"></div></div><div class="field"><div class="lab">Leveret d.</div><div class="box"></div></div></div><div class="foot"><span>Nyt tag</span><span>Presenning &middot; indk&oslash;b</span></div></div>
+
+<div class="page "><div class="head"><span class="ico">🌧️</span><div class="eyebrow">Presenning</div><h2>Monteringsguide</h2></div><h3 style="margin-bottom:8px">Hul efter skorstenen &mdash; etape 1</h3><ol class="seq"><li>Presenning over hullet med rigeligt overl&aelig;g</li><li>L&aelig;gter skruet fast langs alle kanter</li><li>Fald v&aelig;k fra hullet</li></ol><h3 style="margin:26px 0 8px">&Aring;ben sektion &mdash; etape 2</h3><ol class="seq"><li>Presenningen f&oslash;res op over kippen og ned p&aring; den anden side</li><li>Fastg&oslash;res &oslash;verst f&oslash;rst, derefter ned langs siderne</li><li>L&aelig;gter over presenningen som klemlister, ikke kun snore</li><li>Nederste kant f&oslash;res ud over tagfoden, s&aring; vandet l&oslash;ber fri</li></ol><h3 style="margin:26px 0 8px">Plader uden tagpap &mdash; etape 2 til 3</h3><ol class="seq"><li>Samlinger mellem plader d&aelig;kkes med overl&aelig;g</li><li>Kippen d&aelig;kkes s&aelig;rskilt, den er &aring;ben</li><li>Efterses dagligt og efter bl&aelig;st</li></ol><div class="foot"><span>Nyt tag</span><span>Presenning &middot; montering</span></div></div>
+
+<div class="page "><div class="head"><span class="ico">📚</span><div class="eyebrow">Unders&oslash;gelse</div><h2>Undertag og udluftning</h2></div><p style="font-size:12.5pt;color:var(--mut);margin-bottom:20px">Til orientering. Tegningerne er lavet til dette hus, tallene kommer herfra.</p><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">PTM-anvisning nr. 11 &mdash; Faste undertage, 6. udgave 2023, Ph&oslash;nix Tag Materialer</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf">phonixtagmaterialer.dk &middot; PDF</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Afstandslister: 25 &times; 45 mm, trykimpr&aelig;gnerede. S&oslash;mmes pr. 200 mm &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=42">afsnit 9, side 42</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">L&aelig;gter: 38 &times; 73 mm &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=40">afsnit 8, side 40</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">45 mm ventilationsspalte mellem isolering og fast underlag &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=43">figur 9.5, side 43</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Tagfod: spalte 15 mm, 30 mm med insektnet &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=22">afsnit 4.1.2.1, side 22</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Tagfod: 150 cm&sup2; &aring;bning pr. meter i hver side &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=22">afsnit 4.1.2, side 22</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Kip: ventilationsstudse 100 cm&sup2; pr. sp&aelig;rfag i hver side ved husdybde op til 16 m &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=22">afsnit 4.1.2.2, side 22</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Tagfodsdetalje: skr&aring;stillet fodplade, fodblik, insektnet, fuglegitter &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=63">figur 12.1.3.1, side 63</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Kipdetalje &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=65">afsnit 12.2, side 65</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Tagpap uden afstandslister: to r&aelig;kker s&oslash;m, krydss&oslash;mmet pr. 6 cm &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=32">afsnit 7.1.1, side 32</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Tagpap p&aring; br&aelig;dder: polyesterfiltarmeret, PF 2300 SBS / PF 3500 / PF 3500 SBS &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=31">tabel 7.1.1, side 31</a></li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Undertaget l&aelig;gges i hele baner fra kip til tagfod &mdash; <a href="https://www.phonixtagmaterialer.dk/media/4yhkrfqf/11-faste-undertage-udgave-6.pdf#page=32">afsnit 7.1.1, side 32</a></li></ul></div><div class="foot"><span>Nyt tag</span><span>Unders&oslash;gelse 1/3</span></div></div>
+
+<div class="page "><div class="head"><span class="ico">📚</span><div class="eyebrow">Unders&oslash;gelse</div><h2>Tagsten og tagrender</h2></div><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">Bolius &mdash; tagrensning er ren kosmetik</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://www.bolius.dk/ekspert-tagrensning-er-ren-kosmetik-21932">bolius.dk</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Tegltage b&oslash;r ikke renses for holdbarhedens skyld. Rens er kosmetik.</li></ul></div><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">Algeteknik &mdash; kan h&oslash;jtryksrens skade taget?</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://www.algeteknik.dk/blog/kan-hoejtryksrens-skade-taget">algeteknik.dk</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">H&oslash;jtryk sliber overfladen af, s&aring; stenen suger mere vand og gror til hurtigere.</li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Algerens p&aring;f&oslash;res med lavtrykspr&oslash;jte. Synligt efter 6&ndash;8 uger, endeligt efter 3&ndash;8 m&aring;neder.</li></ul></div><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">Center for Bygningsbevaring &mdash; genopl&aelig;gning af tegltage</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://www.bygningsbevaring.dk/uploads/files/anvisninger/19-ANVISN_Tegltage_genoplaegning.pdf">bygningsbevaring.dk &middot; PDF</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Sortering: klar klang = brugbar, dump lyd eller revner = kasseres. Afskallede sten kasseres.</li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Sort&eacute;r efter form og st&oslash;rrelse. Gamle tage har varierende m&aring;l.</li></ul></div><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">BYG-ERFA (99) 25 11 14 &mdash; Genbrug af tegltagsten</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://byg-erfa.dk/genbrug-af-tegltagsten">byg-erfa.dk &middot; 180 kr.</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Vurdering af restlevetid, nedtagning, klarg&oslash;ring og genopl&aelig;gning.</li></ul></div><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">LH T&oslash;mrerfirma &mdash; montering af tagrender</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://lhtoemrerfirma.dk/montering-af-tagrender/">lhtoemrerfirma.dk</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Rendejernene fastg&oslash;res inden taget l&aelig;gges. Selve tagrenden monteres efter.</li></ul></div><div class="foot"><span>Nyt tag</span><span>Unders&oslash;gelse 2/3</span></div></div>
+
+<div class="page "><div class="head"><span class="ico">📚</span><div class="eyebrow">Unders&oslash;gelse</div><h2>Presenning og solceller</h2></div><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">Byggeblik &mdash; midlertidig afd&aelig;kning med presenning</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://byggeblik.dk/skifte-tag-tips-til-midlertidig-afdaekning-med-tag-presenning/">byggeblik.dk</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Presenningen rulles ud over hele fladen og fastg&oslash;res fra toppen og ned.</li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">L&aelig;gter over presenningen som klemlister. Fald hele vejen, s&aring; vandet l&oslash;ber af.</li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Efterses efter regn og bl&aelig;st.</li></ul></div><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">Prins Henning og Dancover &mdash; presenningkvaliteter</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://prinshenning.dk/butik/650-gr-m2/professionel-pvc-presenning-650-gr-m2-3x5m-groen/">prinshenning.dk</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">PE 120&ndash;200 g/m&sup2;: holder 6&ndash;24 m&aring;neder udend&oslash;rs.</li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">PVC-belagt polyester 550&ndash;650 g/m&sup2;: professionel kvalitet til byggeri og tagafd&aelig;kning.</li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">&Oslash;jer hele vejen rundt, typisk pr. meter.</li></ul></div><div style="border-left:5px solid var(--ink);padding:12px 0 12px 18px;margin-bottom:20px"><div style="font-size:13.5pt;font-weight:700;line-height:1.35">Tagviden og X-Sol &mdash; solceller p&aring; tegltag</div><div style="font-size:11.5pt;margin:5px 0 8px"><a href="https://tagviden.dk/solceller-tegltag/">tagviden.dk</a></div><ul><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Integrerede solceller erstatter tagbel&aelig;gningen i panelernes omr&aring;de.</li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Inddækning, tagfod, gennemf&oslash;ringer og kabelveje planl&aelig;gges som del af tagprojektet.</li><li style="padding:7px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.45">Deles stillads mellem tag og solceller, spares en separat opstilling.</li></ul></div><div class="foot"><span>Nyt tag</span><span>Unders&oslash;gelse 3/3</span></div></div>
+</body></html>
