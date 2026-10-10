@@ -1,139 +1,38 @@
-<!doctype html><html lang="da"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tagplan</title><style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#111;--mut:#6B6B6B;--rule:#DCDCDC;--mic:#0B4F8A;--mat:#B23A00;--sol:#2E7D32}
-html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-body{font-family:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);
- font-size:13pt;line-height:1.5;background:#E9E7E2}
-.page > *{flex-shrink:0}
-.page{width:210mm;height:296.5mm;margin:0 auto 8mm;background:#fff;padding:22mm 20mm 18mm;
- overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(0,0,0,.16)}
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tagplan · Nyt tag</title>
+<link rel="stylesheet" href="tagplan.css">
+</head>
+<body>
+<div class="wrap">
 
-h1{font-size:34pt;line-height:1.05;letter-spacing:-.025em;font-weight:800}
-h2{font-size:27pt;line-height:1.1;letter-spacing:-.02em;font-weight:800}
-h3{font-size:10.5pt;text-transform:uppercase;letter-spacing:.16em;color:var(--mut);font-weight:700}
-.eyebrow{font-size:10.5pt;text-transform:uppercase;letter-spacing:.2em;color:var(--mut);font-weight:700}
-.head{border-bottom:3px solid var(--ink);padding-bottom:16px;margin-bottom:26px}
-.head .ico{font-size:30pt;line-height:1;margin-bottom:12px;display:block}
-.meta{margin-top:12px;font-size:12pt;color:var(--mut)}
+<header class="top">
+  <a class="home" href="tagplan.html">Nyt tag · Tagplan</a>
+  <nav class="phases" aria-label="Faser">
+    <a class="mic" href="tagplan-fase-1.html" title="Fase 1: Stillads, vandvarmer og skorsten">1</a>
+    <a class="mat" href="tagplan-fase-2.html" title="Fase 2: Nedtagning, sternbræt og plader">2</a>
+    <a class="firma" href="tagplan-fase-3.html" title="Fase 3: Tagrender">3</a>
+    <a class="mic" href="tagplan-fase-4.html" title="Fase 4: Tagpap">4</a>
+    <a class="firma" href="tagplan-fase-5.html" title="Fase 5: Tegl, gavlsternbrædder og vindskeder">5</a>
+    <a class="sol" href="tagplan-fase-6.html" title="Fase 6: Solceller">6</a>
+  </nav>
+</header>
 
-u{border-bottom:2px solid var(--ink);text-decoration:none;display:inline-block;height:1.3em}
-.field .lab{font-size:9.5pt;text-transform:uppercase;letter-spacing:.14em;color:var(--mut);font-weight:700}
-.field .box{border-bottom:2px solid var(--ink);height:15mm}
-.field.sm .box{height:11mm}
-.fgrid{display:grid;gap:20px}
-.f1{grid-template-columns:1fr} .f2{grid-template-columns:1fr 1fr} .f3{grid-template-columns:1fr 1fr 1fr} .f4{grid-template-columns:1fr 1fr 1fr 1fr}
+<div class="eyebrow">Tagplan</div>
+<h1>Nyt tag</h1>
+<p class="lead">Tegltaget tages ned og får nyt undertag af krydsfiner og tagpap. Bagefter lægges de gamle sten op igen, og der kommer solceller på sydsiden.</p>
 
-ul{list-style:none}
-li.t{display:flex;gap:16px;align-items:flex-start;padding:13px 0 13px 16px;border-bottom:1px solid var(--rule);
- border-left:5px solid var(--rule)}
-li.t.m{border-left-color:var(--mic)} li.t.x{border-left-color:var(--mat)} li.t.s{border-left-color:var(--sol)}
-.cb{flex:0 0 auto;width:18px;height:18px;border:2px solid var(--ink);border-radius:3px;background:#fff;margin-top:4px}
-.tt{flex:1;font-size:13.5pt;line-height:1.4}
-.by{font-size:9.5pt;text-transform:uppercase;letter-spacing:.13em;font-weight:700;flex:0 0 auto;margin-top:6px}
-.by.m{color:var(--mic)} .by.x{color:var(--mat)}
-
-ol.seq{list-style:none;counter-reset:s}
-ol.seq li{counter-increment:s;display:flex;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule);font-size:13.5pt}
-ol.seq li::before{content:counter(s);flex:0 0 34px;font-size:11pt;font-weight:800;color:var(--mut);
- text-align:right;font-variant-numeric:tabular-nums}
-
-.obs{border-left:5px solid var(--ink);padding:14px 0 14px 18px;margin-top:22px;font-size:12.5pt;line-height:1.5}
-.obs .h{font-size:10pt;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--mut);display:block;margin-bottom:6px}
-
-table{width:100%;border-collapse:collapse;font-size:12pt}
-th{text-align:left;font-size:9.5pt;text-transform:uppercase;letter-spacing:.13em;color:var(--mut);
- font-weight:700;padding:0 10px 10px;border-bottom:3px solid var(--ink)}
-td{padding:13px 10px;border-bottom:1px solid var(--rule);vertical-align:middle}
-td.c{text-align:center}
-table.tall td{height:19mm;padding:10px}
-
-.legend{display:flex;gap:30px;font-size:11.5pt;margin:22px 0 0}
-.legend span{display:flex;align-items:center;gap:10px}
-.legend i{width:26px;height:5px;display:block}
-.legend i.m{background:var(--mic)} .legend i.x{background:var(--mat)} .legend i.s{background:var(--sol)}
-.lines div{border-bottom:1px solid var(--rule);height:12mm}
-a{color:var(--mic);text-decoration:none;border-bottom:1px solid rgba(11,79,138,.4)}
-.grow{flex:1}
-.foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:9.5pt;color:var(--mut);
- display:flex;justify-content:space-between}
-
-.sep{text-align:center}
-.sepwrap{flex:1;display:flex;flex-direction:column;justify-content:center}
-.sep .no{font-size:11pt;text-transform:uppercase;letter-spacing:.3em;color:var(--mut);font-weight:700}
-.sep .big{font-size:64pt;font-weight:800;letter-spacing:-.04em;line-height:1;margin:14px 0 22px}
-.sep .desc{font-size:15pt;line-height:1.5;max-width:130mm;margin:0 auto;color:#333}
-.sep .who{margin-top:34px;font-size:10pt;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
-.sep .who .n{display:block;font-size:19pt;letter-spacing:-.01em;text-transform:none;margin-top:6px}
-.days{display:flex;gap:11px;justify-content:center;margin-top:34px}
-.days .d{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:9pt;font-weight:700;color:var(--mut)}
-.days .d i{display:block;width:28px;height:28px;border:2px solid var(--ink);border-radius:4px}
-.days .d.we i{border-color:#BBB}
-.sepfields{display:flex;gap:30px;justify-content:center;margin-top:30px}
-.sepfields .field{width:52mm}
-
-.cb.on{background:var(--ink);position:relative}
-.cb.on::after{content:"";position:absolute;left:4px;top:0;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
-.stats{display:flex;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
-.stats > div{flex:1;padding:16px 8px 16px 0}
-.stats b{display:block;font-size:19pt;font-weight:800;letter-spacing:-.01em}
-.stats span{display:block;font-size:9.5pt;text-transform:uppercase;letter-spacing:.14em;color:var(--mut);font-weight:700;margin-top:5px}
-.toc a{display:flex;align-items:center;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule);color:inherit}
-.toc a.in{padding-left:34px}
-.toc .nm{flex:1;font-size:13.5pt}
-.toc .nm.b{font-weight:700}
-.toc .rt{font-size:11.5pt;color:var(--mut);text-align:right}
-.toc .badge{flex:0 0 30px;height:30px;border-radius:4px;color:#fff;font-size:13pt;font-weight:800;display:flex;align-items:center;justify-content:center;margin-right:16px}
-.sub{display:block;font-size:11.5pt;color:var(--mut);margin-top:2px}
-.aside{font-size:12pt;color:var(--mut);margin-top:16px}
-.task{display:flex;align-items:center;gap:14px;margin-top:6px}
-.task .no{flex:0 0 30px;height:30px;border-radius:4px;background:var(--mat);color:#fff;font-weight:800;font-size:13pt;display:flex;align-items:center;justify-content:center}
-.task .nm{flex:1;font-size:17pt;font-weight:800;letter-spacing:-.01em}
-.task .when{font-size:9.5pt;text-transform:uppercase;letter-spacing:.13em;color:var(--mut);font-weight:700}
-ol.seq.tight li{padding:10px 0;font-size:12.5pt}
-ol.steps{list-style:none;counter-reset:s;margin:8px 0 26px}
-ol.steps li{counter-increment:s;display:flex;gap:14px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--rule);font-size:12pt;line-height:1.4}
-ol.steps li::before{content:counter(s);flex:0 0 44px;font-size:10pt;font-weight:800;color:var(--mut);text-align:right;font-variant-numeric:tabular-nums}
-.src{font-size:10pt;color:var(--mut);margin-top:10px}
-.sep .meet{margin-top:30px;font-size:10pt;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
-.sep .meet .n{display:block;font-size:30pt;letter-spacing:-.02em;text-transform:none;margin-top:6px;color:var(--mat)}
-.sep .meet .q{display:block;font-size:12pt;letter-spacing:0;text-transform:none;font-weight:400;color:var(--mut);margin-top:2px}
-
-@media screen and (max-width:860px){
- body{font-size:12pt}
- .page{width:auto;height:auto;margin:0 0 10px;padding:28px 16px 20px;overflow:visible;box-shadow:none}
- .page h1{font-size:34pt!important}
- h2{font-size:22pt}
- .head .ico{font-size:24pt}
- .sepwrap{padding:36px 0}
- .sep .big{font-size:48pt}
- .sep .desc{font-size:13pt}
- .f2,.f3,.f4{grid-template-columns:1fr}
- .stats{flex-wrap:wrap}
- .stats > div{flex:1 1 45%}
- .legend,.days,.sepfields{flex-wrap:wrap}
- .legend{gap:10px 24px}
- .sepfields .field{width:auto;flex:1 1 40%}
- .toc .rt{white-space:normal}
- .toc a.in{padding-left:0}
- .toc .badge{margin-right:0}
- h3:has(+ .lines),.lines{display:none}
- table{font-size:11pt}
- th{padding:0 6px 8px}
- td{padding:10px 6px}
- table.tall td{height:auto;padding:12px 6px}
- ol.steps li::before{flex-basis:22px}
- .task .nm{font-size:15pt}
-}
-
-@media print{ body{background:#fff} .page{margin:0;box-shadow:none} @page{size:A4;margin:0} }
-</style></head><body>
-<div class="page "><div class="eyebrow">Arbejdsplan</div><h1 style="margin-top:10px;font-size:46pt">Nyt tag</h1><div style="font-size:15pt;color:var(--mut);margin-top:14px">Tegltaget tages ned, renses og l&aelig;gges op igen</div><div style="margin:30px 0 26px">
-<svg viewBox="0 0 660 250" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg">
- <g stroke="#111" fill="none" stroke-width="2.4" stroke-linejoin="round">
+<figure class="cover" aria-hidden="true">
+<svg viewBox="0 0 660 250" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#141414" fill="none" stroke-width="2.4" stroke-linejoin="round">
   <path d="M60,236 L60,150 L330,32 L600,150 L600,236"/>
   <path d="M42,158 L330,32 L618,158"/>
  </g>
- <g stroke="#111" fill="none" stroke-width="1">
+ <g stroke="#141414" fill="none" stroke-width="1">
   <path d="M92,150 L330,46"/><path d="M124,150 L330,60"/><path d="M156,150 L330,74"/>
   <path d="M188,150 L330,88"/><path d="M220,150 L330,102"/><path d="M252,150 L330,116"/>
   <path d="M284,150 L330,130"/>
@@ -141,58 +40,74 @@ ol.steps li::before{content:counter(s);flex:0 0 44px;font-size:10pt;font-weight:
   <path d="M472,150 L330,88"/><path d="M440,150 L330,102"/><path d="M408,150 L330,116"/>
   <path d="M376,150 L330,130"/>
  </g>
- <g stroke="#111" fill="none" stroke-width="1.6">
-  <path d="M60,236 L600,236"/>
- </g>
- <rect x="290" y="186" width="80" height="50" fill="none" stroke="#111" stroke-width="2"/>
- <rect x="140" y="186" width="56" height="38" fill="none" stroke="#111" stroke-width="2"/>
- <rect x="464" y="186" width="56" height="38" fill="none" stroke="#111" stroke-width="2"/>
-</svg></div><div class="stats"><div><b>20,0 &times; 9,2 m</b><span>Grundplan</span></div><div><b>25&deg;</b><span>H&aelig;ldning</span></div><div><b>202 m&sup2;</b><span>Tagareal</span></div><div><b>4</b><span>Etaper</span></div></div><div style="height:34px"></div><div class="fgrid f1"><div class="field"><div class="lab">Etape 1 starter</div><div class="box"></div></div></div><div class="legend"><span><i class="m"></i>Michael</span><span><i class="x"></i>Mathias</span><span><i class="s"></i>H&aring;ndv&aelig;rker og Ph&oslash;nix Tag</span></div><div class="foot"><span>Nyt tag</span><span>Forside</span></div></div>
+ <path d="M60,236 L600,236" stroke="#141414" fill="none" stroke-width="1.6"/>
+ <rect x="290" y="186" width="80" height="50" fill="none" stroke="#141414" stroke-width="2"/>
+ <rect x="140" y="186" width="56" height="38" fill="none" stroke="#141414" stroke-width="2"/>
+ <rect x="464" y="186" width="56" height="38" fill="none" stroke="#141414" stroke-width="2"/>
+</svg>
+</figure>
 
-<div class="page"><div class="head"><div class="eyebrow"></div><h2>Indhold</h2></div><div class="toc"><a href="#etape-0"><span class="nm b">Etape 0</span><span class="rt">Skal afklares</span></a><a href="#forloeb"><span class="nm b">Handlingsforløb</span><span class="rt">Overblik over de fire etaper</span></a><a class="in" href="#etape-1"><span class="badge" style="background:var(--mic)">1</span><span class="nm">Stillads, vandvarmer, skorsten</span><span class="rt">Michael</span></a><a class="in" href="#etape-2"><span class="badge" style="background:var(--mat)">2</span><span class="nm">Nedtagning og plader</span><span class="rt">Mathias</span></a><a class="in" href="#etape-3"><span class="badge" style="background:var(--mic)">3</span><span class="nm">Undertagspap og tagrender</span><span class="rt">Michael</span></a><a class="in" href="#etape-4"><span class="badge" style="background:var(--sol)">4</span><span class="nm">Lægter, tegl og solceller</span><span class="rt">Håndværker og Phønix Tag</span></a><a href="#vaerktoej"><span class="nm b">Værktøj</span><span class="rt"></span></a><a href="#kontakter"><span class="nm b">Kontakter</span><span class="rt"></span></a><a href="#noter"><span class="nm b">Noter</span><span class="rt"></span></a><a href="tagplan-bilag.html"><span class="nm b">Bilag →</span><span class="rt">Tagfod, udluftning, presenning og kilder</span></a></div><div class="foot"><span>Nyt tag</span><span>Indhold</span></div></div>
+<div class="stats">
+  <div><b>20,0 × 9,2 m</b><span class="l">Grundplan</span></div>
+  <div><b>25°</b><span class="l">Hældning</span></div>
+  <div><b>202 m²</b><span class="l">Tagareal</span></div>
+  <div><b>6</b><span class="l">Faser</span></div>
+</div>
 
-<div class="page" id="etape-0"><div class="head"><span class="ico">❓</span><div class="eyebrow">Etape 0</div><h2>Skal afklares</h2><div class="meta">Primær drivkraft: Mathias</div></div><h3 style="margin-top:14px">Skorsten</h3><p style="margin:6px 0 9px;font-size:13pt">Hvad skal være gjort klar, inden den rives ned i etape 1?</p><div class="field sm"><div class="lab">Det skal gøres</div><div class="box"></div></div><h3 style="margin-top:14px">Tegl</h3><p style="margin:6px 0 9px;font-size:13pt">Phønix Tag lægger ikke stenene op igen. Der skal findes en anden håndværker til etape 4.</p><div class="field sm"><div class="lab">Hvem</div><div class="box"></div></div><h3 style="margin-top:14px">Tagrender</h3><p style="margin:6px 0 9px;font-size:13pt">Hvem sætter renderne og nedløbene op i etape 3?</p><div class="field sm"><div class="lab">Hvem</div><div class="box"></div></div><h3 style="margin-top:14px">Gavlbrædder</h3><p style="margin:6px 0 9px;font-size:13pt">Ingen vindskeder i dag. Brædderne under stenene ved gavlen er skåret ud i hakker, så stenene går helt ud over kanten.</p><div class="field sm"><div class="lab">Skal de skiftes</div><div class="box"></div></div><div class="foot"><span>Nyt tag</span><span>Etape 0</span></div></div>
+<div class="paths">
+  <a href="tagplan-fase-2.html"><span class="l">Hjælper du 16.–18. oktober?</span><b>Fase 2: Nedtagning og plader →</b><span class="d">Mødetid, rækkefølge og trin for trin.</span></a>
+  <a href="tagplan-fase-3.html"><span class="l">Giver du tilbud?</span><b>Fase 3 og fase 5 →</b><span class="d">Tagrender og tegl, gavlsternbrædder og vindskeder. Samme firma.</span></a>
+</div>
 
-<div class="page" id="forloeb"><div class="head"><span class="ico">🗺️</span><div class="eyebrow"></div><h2>Handlingsforløb</h2></div><table><thead><tr><th>Etape</th><th>Primær drivkraft</th><th>Hvornår</th></tr></thead><tbody><tr><td><b>0</b> &nbsp;Skal afklares</td><td style="color:var(--mat);font-weight:700">Mathias</td><td>Inden uge 42</td></tr><tr><td><b>1</b> &nbsp;Stillads, vandvarmer, skorsten</td><td style="color:var(--mic);font-weight:700">Michael</td><td>Uge 42, hverdage</td></tr><tr><td><b>2</b> &nbsp;Nedtagning og plader</td><td style="color:var(--mat);font-weight:700">Mathias</td><td>Uge 42, fre–søn 16.–18. okt.</td></tr><tr><td><b>3</b> &nbsp;Undertagspap og tagrender</td><td style="color:var(--mic);font-weight:700">Michael</td><td>Uge 43 og 44</td></tr><tr><td><b>4</b> &nbsp;Lægter, tegl og solceller</td><td style="color:var(--sol);font-weight:700">Håndværker og Phønix Tag</td><td>Efter etape 3. Solceller senest 2. dec.</td></tr></tbody></table><div class="grow"></div><h3>Noter</h3><div class="lines"><div></div><div></div><div></div><div></div></div><div class="foot"><span>Nyt tag</span><span>Handlingsforløb</span></div></div>
+<h2>Faser</h2>
+<ul class="phaselist">
+  <li><a href="tagplan-fase-1.html"><span class="no bg-mic">1</span><span class="nm">Stillads, vandvarmer og skorsten</span><span class="meta">Michael · uge 42, hverdage</span></a></li>
+  <li><a href="tagplan-fase-2.html"><span class="no bg-mat">2</span><span class="nm">Nedtagning, sternbræt og plader</span><span class="meta">Mathias med ca. 12 hjælpere · fredag–søndag 16.–18. oktober</span></a></li>
+  <li><a href="tagplan-fase-3.html"><span class="no bg-firma">3</span><span class="nm">Tagrender</span><span class="meta">Firma søges · rendejern og fodblik i uge 43, før tagpappen</span></a></li>
+  <li><a href="tagplan-fase-4.html"><span class="no bg-mic">4</span><span class="nm">Tagpap</span><span class="meta">Michael · senest 10 dage efter pladerne, dvs. ca. 28. oktober</span></a></li>
+  <li><a href="tagplan-fase-5.html"><span class="no bg-firma">5</span><span class="nm">Tegl, gavlsternbrædder og vindskeder</span><span class="meta">Firma søges, samme som fase 3 · november</span></a></li>
+  <li><a href="tagplan-fase-6.html"><span class="no bg-sol">6</span><span class="nm">Solceller</span><span class="meta">Phønix Tag · færdig senest 2. december</span></a></li>
+</ul>
 
-<div class="page sep" id="etape-1"><div class="sepwrap"><div class="no">Etape</div><div class="big">1</div><div style="font-size:21pt;font-weight:800;letter-spacing:-.02em;margin-bottom:18px">Stillads, vandvarmer, skorsten</div><div class="desc">Taget gøres klar. Stillads op, vandvarmer væk, skorsten ned under tagfladen.</div><div class="who">Primær drivkraft<span class="n" style="color:var(--mic)">Michael</span></div><div class="sepfields"><div class="field"><div class="lab">Tidspunkt</div><div class="box" style="font-size:19pt;font-weight:800;padding-top:6px;white-space:nowrap">Før fredag uge 42</div></div></div></div><div class="foot"><span>Nyt tag</span><span>Etape 1</span></div></div>
+<h2>Taget</h2>
+<p>Huset er fra 1967 med en tilbygning fra 1973. Saddeltag med gitterspær 2½" × 6" for hver 95 cm. Mure 18,7 × 7,9 m og ca. 60–65 cm udhæng hele vejen rundt. Der er 5,05 m fra tagfod til kip.</p>
+<p>Stenene er brune vingetegl fra Sarstedter Ziegel, 23,5 × 39,5 cm. De genbruges. Den gamle indbyggede rende fjernes, og den nye zinkrende hænger foran tagfoden.</p>
 
-<div class="page"><div class="head"><span class="ico">🪜</span><div class="eyebrow">Etape 1</div><h2>Opgaver</h2></div><ul><li class="t m"><span class="cb"></span><span class="tt">Stillads op på syd- og nordside</span></li><li class="t m"><span class="cb"></span><span class="tt">Solcelle-vandvarmer ned og bortskaffet</span></li><li class="t m"><span class="cb"></span><span class="tt">Skorsten ned til under tagfladen</span></li><li class="t m"><span class="cb"></span><span class="tt">En af de store presenninger over hullet efter skorstenen</span></li></ul><div class="obs"><span class="h">Krav</span>Skorstenen skal ned så lavt, at pladerne kan lægges hen over.</div><div class="grow"></div><h3>Noter</h3><div class="lines"><div></div><div></div><div></div><div></div></div><div class="foot"><span>Nyt tag</span><span>Etape 1 · opgaver</span></div></div>
+<h3>Det nye tag, nedefra og op</h3>
+<ol class="steps">
+  <li><span>Sternbræt 25 × 125 mm, over- og understern</span></li>
+  <li><span>Krydsfiner 18 mm, NPI Combi TG2, helt ud over sternbrættet</span></li>
+  <li><span>Rendejern fræset ned i krydsfineren</span></li>
+  <li><span>Fodblik over rendejernene, ned i renden</span></li>
+  <li><span>Tagpap Icopal Fastsafe, klæbet på fodblikket</span></li>
+  <li><span>Afstandslister 25 × 50 mm på hvert spær</span></li>
+  <li><span>Hævet fodlægte med ventileret fuglegitter</span></li>
+  <li><span>Lægter 38 × 73 mm, ca. 31,5 cm mellem lægterne</span></li>
+  <li><span>Zinktagrende, VMZINC Quartz 280 mm</span></li>
+  <li><span>De gamle tegl. Nederste række med forkanten midt over renden</span></li>
+</ol>
+<p>Loftet efterisoleres senere langs tagfladen, så taget bygges som paralleltag. Luften kommer ind gennem en 30 mm spalte med insektnet ved tagfoden og ud gennem ventilationsstudse ved kippen. Tegninger i målestok står i <a href="tagplan-bilag.html">bilaget</a>.</p>
 
-<div class="page sep" id="etape-2"><div class="sepwrap"><div class="no">Etape</div><div class="big">2</div><div style="font-size:21pt;font-weight:800;letter-spacing:-.02em;margin-bottom:18px">Nedtagning og plader</div><div class="desc">Teglene tages ned, og taget lukkes med plader igen, stykke for stykke. Fredag, lørdag og søndag 16.–18. oktober med ca. 12 hjælpere om dagen.</div><div class="who">Primær drivkraft<span class="n" style="color:var(--mat)">Mathias</span></div><div class="meet">Mødetid<span class="n">Kl. 09 sharp</span><span class="q">hvis man kan nå det</span></div><div class="days"><span class="d"><span>M</span><i></i></span><span class="d"><span>T</span><i></i></span><span class="d"><span>O</span><i></i></span><span class="d"><span>T</span><i></i></span><span class="d"><span>F</span><i style="background:var(--mat);border-color:var(--mat)"></i></span><span class="d we"><span>L</span><i style="background:var(--mat);border-color:var(--mat)"></i></span><span class="d we"><span>S</span><i style="background:var(--mat);border-color:var(--mat)"></i></span></div></div><div class="foot"><span>Nyt tag</span><span>Etape 2</span></div></div>
+<h2>Skal afklares</h2>
+<ul class="check">
+  <li><span>Firma til fase 3 og fase 5</span><span class="who c-mat">Mathias</span></li>
+  <li><span>Kipsten: kippen skal nok skiftes helt</span><span class="who c-mic">Michael</span></li>
+  <li><span>Hvilken pap der skal ligge under solcellerne</span><span class="who c-sol">Phønix Tag</span></li>
+  <li><span>Gavlbrædder: skal de skiftes?</span><span class="who c-mat">Mathias</span></li>
+</ul>
 
-<div class="page"><div class="head"><span class="ico">📋</span><div class="eyebrow">Etape 2</div><h2>Rækkefølge</h2></div><div class="obs" style="margin-top:0"><span class="h">Princip</span>Taget tages i stykker fra gavl mod gavl. Der åbnes kun et stykke, som kan nå at blive lukket med plader samme dag. Hele taget står aldrig åbent.</div><ol class="seq tight" style="margin-top:14px"><li><span><b>Klargøring</b><span class="sub">Fredag morgen: slisker, blød landing, paller og nedløbsrør.</span></span></li><li><span><b>Kip og tegl af</b><span class="sub">Oppefra og ned, ned ad slisken.</span></span></li><li><span><b>Modtagelse</b><span class="sub">Bank-test, sortering og stabling på paller.</span></span></li><li><span><b>Lægter og undertag af</b><span class="sub">Gem ca. 100 m lægter til presenningerne.</span></span></li><li><span><b>Tagfod af og spær tjekket</b><span class="sub">Rendekassen og de gamle sternbrædder.</span></span></li><li><span><b>Nyt sternbræt op</b><span class="sub">Før den nederste række plader.</span></span></li><li><span><b>Plader op</b><span class="sub">Nedefra og op.</span></span></li><li><span><b>Afdækning ved fyraften</b><span class="sub">Hver aften, indtil tagpappen er på.</span></span></li></ol><p class="aside">Trin 2–7 gentages for hvert stykke. Trinene er beskrevet på de næste sider.</p><div class="foot"><span>Nyt tag</span><span>Etape 2 · rækkefølge</span></div></div>
+<h2>Kontakt</h2>
+<dl class="contact">
+  <dt>Bygherre</dt><dd>Mathias Egekvist · <a href="mailto:mathias@hvideg.dk">mathias@hvideg.dk</a></dd>
+  <dt>Tømrer</dt><dd>Michael</dd>
+  <dt>Solceller</dt><dd>Phønix Tag Energi</dd>
+  <dt>Træ, plader og tagpap</dt><dd>Davidsen Aarhus</dd>
+  <dt>Tagrender</dt><dd>AO</dd>
+  <dt>Gavlblik</dt><dd>Profilmetal</dd>
+</dl>
 
-<div class="page"><div class="head"><span class="ico">🧱</span><div class="eyebrow">Etape 2 · trin 1–2</div><h2>Klargøring og tegl af</h2></div><div class="task"><span class="no">1</span><span class="nm">Klargøring</span><span class="when">Fredag morgen</span></div><ol class="steps"><li><span>Slisken fra taget ned til stilladset og slisken fra stilladset ned til jorden sættes op.</span></li><li><span>Blød landing i bunden af begge slisker: skumgummipude eller halmsæk.</span></li><li><span>Paller lægges ud, der hvor stenene skal stables.</span></li><li><span>Affaldsbunker sat af, én for hver slags: træ, gammelt undertag, kasserede sten og metal. Affaldet køres løbende på genbrugsstationen.</span></li><li><span>Nedløbsrørene tages ned.</span></li></ol><div class="task"><span class="no">2</span><span class="nm">Kip og tegl af</span></div><ol class="steps"><li><span>Lørdag og søndag: rul presenningen tilbage fra dagens stykke. Kun så meget, som kan nå at blive lukket.</span></li><li><span>Kipstenene tages af først og lægges for sig. Tæl dem. Vi skal vide, om der er nok til den nye kip.</span></li><li><span>Kig på undersiden af en sten. Navnet står der. Tag et billede og send det til Mathias.</span></li><li><span>Stenene tages af oppefra og ned, række for række.</span></li><li><span>Stenene sendes ned ad slisken med undersiden opad.</span></li><li><span>Ved stilladset tages hver sten af slisken med det samme og sendes videre. Ellers knuser den næste sten den.</span></li></ol><div class="foot"><span>Nyt tag</span><span>Etape 2 · trin 1–2</span></div></div>
+<footer class="foot"><span>Nyt tag · opdateret 10. oktober 2026</span><a href="tagplan-bilag.html">Bilag med tegninger</a></footer>
 
-<div class="page"><div class="head"><span class="ico">🪵</span><div class="eyebrow">Etape 2 · trin 3–4</div><h2>Sten, lægter og undertag</h2></div><div class="task"><span class="no">3</span><span class="nm">Modtagelse</span><span class="when">Ved jorden</span></div><ol class="steps"><li><span>Tag stenen af slisken med det samme.</span></li><li><span>Bank let på stenen. Klar klang: god. Dump lyd, revner eller afskalninger: kasseres.</span></li><li><span>Sortér efter form og størrelse. Gamle sten har ikke altid samme mål.</span></li><li><span>Gode sten stables på paller, højst tre lag.</span></li><li><span>Kipstenene på en palle for sig.</span></li><li><span>Kasserede sten på bunken med kasserede sten.</span></li><li><span>Stenene renses ikke nu. Det besluttes senere.</span></li></ol><div class="task"><span class="no">4</span><span class="nm">Lægter og undertag af</span></div><ol class="steps"><li><span>Lægterne tages af. Søm trækkes ud eller slås om med det samme.</span></li><li><span><b>Gem ca. 100 m hele, lige lægter</b> i en bunke for sig. De skal bruges som klemlister på presenningerne.</span></li><li><span>Resten af lægterne på træbunken.</span></li><li><span>Det gamle undertag tages af og lægges på sin bunke.</span></li><li><span>Udluftning og gennemføringer (emhætte, bad og toilet) tages ned. Tag et billede af, hvor de sad.</span></li></ol><div class="foot"><span>Nyt tag</span><span>Etape 2 · trin 3–4</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">📐</span><div class="eyebrow">Etape 2 · trin 5–6</div><h2>Tagfod og sternbræt</h2></div><div class="task"><span class="no">5</span><span class="nm">Tagfod af og spær tjekket</span><span class="when">Fra stilladset</span></div><ol class="steps"><li><span>Den indbyggede rende og rendekassen tages af.</span></li><li><span>De gamle sternbrædder tages af.</span></li><li><span>Spærenderne tjekkes. Er de rådne eller for korte, så sig til Michael. De skal skiftes eller forlænges, før sternbrættet kommer op.</span></li><li><span>Spærene tjekkes for råd og skader.</span></li><li><span>Søm, der stikker op, slås ned eller trækkes ud.</span></li><li><span>Stræk en snor hen over spærene og tjek, at fladen er lige.</span></li></ol><div class="task"><span class="no">6</span><span class="nm">Nyt sternbræt op</span></div><ol class="steps"><li><span>Understern 25 × 125 mm op på spærenderne, derefter overstern ovenpå.</span></li><li><span>Samlingerne skal falde midt på en spærende.</span></li><li><span>Overkanten må ikke stå op over spærene. Pladerne skal ligge plant hen over.</span></li><li><span>Tegningen står i <a href="tagplan-bilag.html">bilaget</a> under Tagfod · opbygning.</span></li></ol><div class="foot"><span>Nyt tag</span><span>Etape 2 · trin 5–6</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">🔨</span><div class="eyebrow">Etape 2 · trin 7</div><h2>Plader op</h2></div><div class="obs" style="margin-top:0"><span class="h">Pladerne</span>NPI Combi TG2, 18 × 600 × 2440 mm, 208 stk. Fer og not kun på langsiderne.</div><ol class="steps"><li><span>Start nederst ved tagfoden og arbejd opad. Pladerne går helt ud over sternbrættet.</span></li><li><span>Langsiden lægges på tværs af spærene. Stemplet vender ned mod spærene.</span></li><li><span>Begge ender skal ligge midt på et spær. Der må ikke være samlinger mellem spærene.</span></li><li><span>En plade dækker to spærfag. Mål fra spærmidte til spærmidte for hver plade og skær til, for afstanden varierer.</span></li><li><span>Hold 2 mm luft mellem pladeenderne.</span></li><li><span>Forskyd endesamlingerne mindst ét spærfag fra række til række.</span></li><li><span>Fer og not trykkes helt sammen. Slå på en klods, aldrig direkte på pladekanten.</span></li><li><span>Søm 2,8 × 63 mm til udendørs brug: for hver 15 cm langs pladens kanter og for hver 30 cm på spæret i midten.</span></li><li><span>Ved gavlen hviler pladekanten på det yderste spær.</span></li><li><span>Den øverste række skæres til på langs ved kippen. Kanten skal hvile på en strø mellem spærene (se <a href="tagplan-bilag.html">bilaget</a> under Kip).</span></li><li><span>Der må ikke være en endesamling over hullet efter skorstenen.</span></li></ol><p class="src">Søm, fuge og afstande er fra Moelvens vejledning til krydsfiner på tag.</p><div class="foot"><span>Nyt tag</span><span>Etape 2 · trin 7</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">⚠️</span><div class="eyebrow">Etape 2 · trin 8</div><h2>Afdækning ved fyraften</h2></div><ol class="seq tight"><li>Stop i tide, så stykket bliver lukket med plader, og presenningerne kommer på i dagslys. Solen går ned ca. kl. 18.15.</li><li>Presenningerne skal dække alle plader og alt, der står åbent. Pladerne er ikke tætte, før tagpappen er på.</li><li>De lægges hen over kippen, så de dækker begge sider.</li><li>Læg den østligste først og den vestligste sidst. Så ligger samlingerne i læ for vestenvinden. Mindst 1 m overlæg.</li><li>Fastgør dem oppe ved kippen først og derefter ned langs siderne.</li><li>Brug de gamle lægter som klemlister, skruet gennem presenningen ned i pladerne. Snore alene holder ikke.</li><li>Den nederste kant føres ud over tagfoden, så vandet løber frit af. Ingen vandlommer.</li><li>Presenningerne efterses hver dag og efter regn og blæst, indtil tagpappen er på.</li></ol><div class="obs"><span class="h">Inden I går hjem</span>Søm og skruer samles op. Affaldet ligger på bunkerne. Plader og sten på jorden dækkes til.</div><div class="foot"><span>Nyt tag</span><span>Etape 2 · afdækning</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">📦</span><div class="eyebrow">Etape 2</div><h2>Skal stå klar inden fredag</h2></div><ul><li class="t x"><span class="cb"></span><span class="tt">Stillads med rækværk, vandvarmer ned og skorsten ned under tagfladen (etape 1)</span><span class="by m">Michael</span></li><li class="t x"><span class="cb"></span><span class="tt">208 plader leveret 14. okt. Stablet plant og tørt, dækket til med luft omkring</span></li><li class="t x"><span class="cb"></span><span class="tt">Sternbrædder leveret</span></li><li class="t x"><span class="cb"></span><span class="tt">Sømpistoler og søm</span><span class="by m">Michael</span></li><li class="t x"><span class="cb on"></span><span class="tt">3 presenninger 8 × 12 m</span></li><li class="t x"><span class="cb"></span><span class="tt">To slisker bygget og blød landing til bunden</span></li><li class="t x"><span class="cb"></span><span class="tt">Paller til stenene og plads til at stable dem</span></li><li class="t x"><span class="cb"></span><span class="tt">Trailer til at køre affald på genbrugsstationen</span></li><li class="t x"><span class="cb"></span><span class="tt">Stiger og tagstige</span></li><li class="t x"><span class="cb"></span><span class="tt">Handsker nok til alle</span></li><li class="t x"><span class="cb"></span><span class="tt">Forplejning, vand og toilet til ca. 12</span></li></ul><div class="foot"><span>Nyt tag</span><span>Etape 2 · forberedelse</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">📦</span><div class="eyebrow">Etape 2</div><h2>Materialer</h2></div><table style="margin-top:10px"><thead><tr><th class="c">Bestilt</th><th>Materiale</th><th>Mængde</th><th>Hvem</th></tr></thead><tbody><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Plader NPI Combi TG2, 18 × 600 × 2440 mm</td><td>208 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Sternbræt, over- og understern 25 × 125 mm, trykimprægneret</td><td>10 + 10 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Søm til pladerne, 2,8 × 63 mm</td><td></td><td>Michael</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Presenninger 8 × 12 m</td><td>3 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Klemlister: gamle lægter fra taget</td><td>ca. 100 m</td><td>Gemmes i trin 4</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Strøer mellem spærene ved kippen</td><td>ca. 20 m</td><td></td></tr></tbody></table><div class="foot"><span>Nyt tag</span><span>Etape 2 · materialer</span></div></div>
-
-<div class="page sep" id="etape-3"><div class="sepwrap"><div class="no">Etape</div><div class="big">3</div><div style="font-size:21pt;font-weight:800;letter-spacing:-.02em;margin-bottom:18px">Undertagspap og tagrender</div><div class="desc">Tagpap og afstandslister på pladerne, ny tagfod og tagrender op. Taget er tæt, når etapen er færdig.</div><div class="who">Primær drivkraft<span class="n" style="color:var(--mic)">Michael</span></div><div class="sepfields"><div class="field"><div class="lab">Tidspunkt</div><div class="box" style="font-size:19pt;font-weight:800;padding-top:6px;white-space:nowrap">Uge 43 og 44</div></div></div></div><div class="foot"><span>Nyt tag</span><span>Etape 3</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">🏠</span><div class="eyebrow">Etape 3</div><h2>Det er med i etape 3</h2></div><ul><li class="t m"><span class="cb"></span><span class="tt">Rendejern fræset ned i pladerne</span></li><li class="t m"><span class="cb"></span><span class="tt">Fodblik over rendejernene, bukket ned i renden</span></li><li class="t m"><span class="cb"></span><span class="tt">Undertagspap i hele baner fra kip til fod</span></li><li class="t m"><span class="cb"></span><span class="tt">Afstandslister 25 × 50 mm på hvert spær, i takt med tagpappen</span></li><li class="t m"><span class="cb"></span><span class="tt">Underbeklædning under udhænget med 30 mm spalte og insektnet, se <a href="tagplan-bilag.html">bilag</a></span></li><li class="t m"><span class="cb"></span><span class="tt">Tagrender og nedløbsrør op</span></li></ul><div class="foot"><span>Nyt tag</span><span>Etape 3</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">📦</span><div class="eyebrow">Etape 3</div><h2>Materialer</h2></div><table style="margin-top:10px"><thead><tr><th class="c">Bestilt</th><th>Materiale</th><th>Mængde</th><th>Hvem</th></tr></thead><tbody><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Undertagspap Icopal Fastsafe, 1 × 10 m</td><td>23 rl.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Afstandslister 25 × 50 mm, trykimprægneret, 5,1 m</td><td>50 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Fodblik, Icopal alu-tagfod 12A</td><td>44 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Insektnet til spalten, 60 cm × 25 m</td><td>1 rl.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Hvid maling til tagfoden</td><td></td><td>Michael</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Rendejern 11" kort</td><td>70 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Galvaniserede skruer til rendejernene</td><td>ca. 210</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Tagrender VMZINC Quartz 280 mm, 3 m</td><td>14 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Nedløb Ø76 med bøjninger og brøndkraver</td><td>4 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Tagrendelim</td><td>2 tuber</td><td>Mathias</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Dyvler til rørholderne</td><td>8 stk.</td><td>Mathias</td></tr></tbody></table><div class="foot"><span>Nyt tag</span><span>Etape 3 · materialer</span></div></div>
-
-<div class="page sep" id="etape-4"><div class="sepwrap"><div class="no">Etape</div><div class="big">4</div><div style="font-size:21pt;font-weight:800;letter-spacing:-.02em;margin-bottom:18px">Lægter, tegl og solceller</div><div class="desc">Lægter, fuglegitter, ventilationsstudse, gavlblik, tegl og kip. Solcellerne på sydsiden monteres undervejs, ikke bagefter.</div><div class="who">Primær drivkraft<span class="n" style="color:var(--sol)">Håndværker og Phønix Tag</span></div><div class="days"><span class="d"><span>M</span><i></i></span><span class="d"><span>T</span><i></i></span><span class="d"><span>O</span><i></i></span><span class="d"><span>T</span><i></i></span><span class="d"><span>F</span><i></i></span><span class="d we"><span>L</span><i></i></span><span class="d we"><span>S</span><i></i></span></div><div class="sepfields"><div class="field"><div class="lab">Uge nr.</div><div class="box"></div></div><div class="field"><div class="lab">Antal dage</div><div class="box"></div></div></div></div><div class="foot"><span>Nyt tag</span><span>Etape 4</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">🏠</span><div class="eyebrow">Etape 4</div><h2>Det er med i etape 4</h2></div><ul><li class="t s"><span class="cb"></span><span class="tt">Ventilationsstudse ved kippen, to pr. spærfag i hver side</span></li><li class="t s"><span class="cb"></span><span class="tt">Hævet fodlægte og fuglegitter</span></li><li class="t s"><span class="cb"></span><span class="tt">Lægter 38 × 73 mm, ca. 31,5 cm mellem lægterne som på det gamle tag</span></li><li class="t s"><span class="cb"></span><span class="tt">Gavlblik, hvide, med butylbånd</span></li><li class="t s"><span class="cb"></span><span class="tt">Tagsten lagt op og suppleret, hvor det er nødvendigt</span></li><li class="t s"><span class="cb"></span><span class="tt">Solceller på sydsiden (Phønix Tag)</span></li><li class="t s"><span class="cb"></span><span class="tt">Kip og rygning, 20 m</span></li></ul><div class="foot"><span>Nyt tag</span><span>Etape 4</span></div></div>
-
-<div class="page"><div class="head"><span class="ico">📦</span><div class="eyebrow">Etape 4</div><h2>Materialer</h2></div><table style="margin-top:10px"><thead><tr><th class="c">Bestilt</th><th>Materiale</th><th>Mængde</th><th>Hvem</th></tr></thead><tbody><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Lægter 38 × 73 mm C18, 4,8 m</td><td>160 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Ventilationsstudse Icopal IcoAir</td><td>8 poser</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Fuglegitter med ventilation, sort</td><td>42 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Toplægteholdere</td><td>23 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Gavlblik, vindskede stor, hvid, med skruer</td><td>12 stk.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Butylbånd til gavlblikket</td><td>3 rl.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb on" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Rygningsbånd 39 cm</td><td>5 rl.</td><td>Mathias</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Kipclips, ekstra tegl og gennemføringssten</td><td>kræver stenens navn</td><td>Mathias</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Algerens og en sprøjte mere</td><td></td><td>Mathias</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Gavlbrædder</td><td>kun hvis de skal skiftes</td><td></td></tr></tbody></table><div class="foot"><span>Nyt tag</span><span>Etape 4 · materialer</span></div></div>
-
-<div class="page" id="vaerktoej"><div class="head"><span class="ico">🧰</span><div class="eyebrow">Værktøj</div><h2></h2></div><table class="tall"><thead><tr><th class="c">Klar</th><th>Værktøj</th><th>Hvem skaffer</th></tr></thead><tbody><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Stillads med rækværk</td><td>Michael</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Sømpistoler</td><td>Michael (afventer svar)</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">To slisker</td><td>Mathias (skal bygges)</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Skumgummipude eller halmsæk til slisken</td><td><u style="min-width:60mm"></u></td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Stiger</td><td><u style="min-width:60mm"></u></td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Tagstige</td><td><u style="min-width:60mm"></u></td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600">Murerværktøj til skorsten</td><td>Michael</td></tr><tr><td class="c"><span class="cb" style="display:inline-block;margin:0"></span></td><td style="font-weight:600"><u style="min-width:100%"></u></td><td><u style="min-width:60mm"></u></td></tr></tbody></table><div class="obs"><span class="h">Spørgsmål til Michael</span>Er der rækværk på stilladset?</div><div class="foot"><span>Nyt tag</span><span>Værktøj</span></div></div>
-
-<div class="page" id="kontakter"><div class="head"><span class="ico">📞</span><div class="eyebrow">Kontakter</div><h2></h2></div><table class="tall"><thead><tr><th>Rolle</th><th>Navn</th></tr></thead><tbody><tr><td style="font-weight:700;width:44%">Bygherre</td><td>Mathias Egekvist</td></tr><tr><td style="font-weight:700;width:44%">Tømrer</td><td>Michael</td></tr><tr><td style="font-weight:700;width:44%">Solceller</td><td>Phønix Tag Energi</td></tr><tr><td style="font-weight:700;width:44%">Træ og tagpap</td><td>Davidsen Aarhus</td></tr><tr><td style="font-weight:700;width:44%">Tagrender</td><td>AO</td></tr><tr><td style="font-weight:700;width:44%">Gavlblik</td><td>Profilmetal</td></tr><tr><td style="font-weight:700;width:44%">Tegl</td><td><u style="min-width:60mm"></u></td></tr></tbody></table><div class="foot"><span>Nyt tag</span><span>Kontakter</span></div></div>
-
-<div class="page" id="noter"><div class="head"><span class="ico">📝</span><div class="eyebrow">Noter</div><h2></h2></div><div class="lines"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div class="foot"><span>Nyt tag</span><span>Noter</span></div></div>
-
-</body></html>
+</div>
+</body>
+</html>
