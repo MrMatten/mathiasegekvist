@@ -8,6 +8,8 @@
   --mic:#0b4f8a;
   --mat:#b23a00;
   --firma:#6b4c9a;
+  --firma-tint:#f2eef8;
+  --firma-line:#d6cbe6;
   --sol:#2e7d32;
   --font:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -86,11 +88,20 @@ td.n{white-space:nowrap;font-variant-numeric:tabular-nums}
 .st{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}
 .st.ok{color:var(--sol)} .st.no{color:var(--mat)}
 
-.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:24px}
-.paths a{display:block;border:2px solid var(--ink);border-radius:4px;padding:14px 16px;color:inherit;text-decoration:none}
-.paths a:hover{background:var(--tint)}
-.paths b{display:block;font-size:18px;margin-top:2px}
-.paths span.d{display:block;color:var(--mut);font-size:15px;margin-top:2px}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:28px}
+.path{display:flex;flex-direction:column;gap:6px;border-radius:6px;padding:18px 20px;text-decoration:none}
+.path .kicker{font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
+.path b{font-size:21px;line-height:1.2;letter-spacing:-.01em}
+.path .d{font-size:15px}
+.path.helper{background:var(--mat);color:#fff}
+.path.helper .kicker,.path.helper .d{color:rgba(255,255,255,.86)}
+.path.helper .go{margin-top:auto;padding-top:12px;font-weight:800}
+.path.helper:hover{background:#983100}
+.path.bid{background:var(--firma-tint);border:3px solid var(--firma);color:var(--ink)}
+.path.bid .kicker{color:var(--firma)}
+.path.bid a{display:flex;align-items:center;gap:10px;padding:10px 12px;margin-top:4px;background:var(--paper);border:1px solid var(--firma-line);border-radius:4px;color:var(--ink);font-weight:700;text-decoration:none}
+.path.bid a:hover{border-color:var(--firma)}
+.path.bid a .no{flex:0 0 26px;width:26px;height:26px;font-size:14px;background:var(--firma)}
 
 .phaselist{list-style:none;margin-top:12px}
 .phaselist a{display:grid;grid-template-columns:36px minmax(0,1fr);gap:2px 14px;padding:14px 0;border-bottom:1px solid var(--rule);color:inherit;text-decoration:none}
